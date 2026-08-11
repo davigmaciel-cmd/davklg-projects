@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: rgb(122, 20, 20);
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0 , 0 , 0 , 0.434);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.is-active {
+    display: flex;
+}
+
+.container {
+    background-color: rgb(9, 3, 94);
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.btnAbrir {
+    color: white;
+    background-color: rgb(122, 20, 20);
+}
+
+.divBtnA {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+}
+
+.btnFechar{
+    background-color: rgb(8, 8, 43);
+    color: white;
+    width: 30px;
+    height: 30px;
+    position: 0 auto;
+} 
