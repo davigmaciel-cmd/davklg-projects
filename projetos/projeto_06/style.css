@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./assets/dark-abstract-coil-pc-za6ag26yfqxqp6gc.jpg);
+}
+
+divInput {
+    gap: 20px;
+    margin-top: 100px;
+}
+
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+.lista {
+    color: white;
+}
