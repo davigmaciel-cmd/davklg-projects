@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #575757;
+}
+
+.cardsVo {
+    background-image: url(./assets-rec/background.png);
+    width: 600px;
+    height: 800px;
+    position:absolute;
+    left: 377px;
+    top: 130px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 36px;
+    position: relative;
+    top: 58px;
+}
+
+.p1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 28px;
+    position: relative;
+    top: 58px;
+}
+
+.p2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+    position: relative;
+    top: 58px;
+}
+
+.album {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 570px;
+    position: relative;
+    top: 85px;
+    left: 18px;
+}
+
+.cards1 {
+    background-color: #FFFFFF;
+    width: 140px;
+    height: 180px;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.cards1.active{
+    border: 3px solid #3DFF3D;
+}
+
+.cards2 {
+    background-color: #FFFFFF;
+    width: 140px;
+    height: 180px;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}  
+
+.cards2.active{
+    border: 3px solid #3DFF3D;
+}
+
+.cards3 {   
+    background-color: #FFFFFF;
+    width: 140px;
+    height: 180px;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.cards3.active{
+    border: 3px solid #3DFF3D;
+}
+
+.cards4 {
+    background-color: #FFFFFF;
+    width: 140px;
+    height: 180px;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.cards4.active{
+    border: 3px solid #3DFF3D;
+}
+
+.cards5 {
+    background-color: #FFFFFF;
+    width: 140px;
+    height: 180px;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.cards5.active{
+    border: 3px solid #3DFF3D;
+}
+
+.cards6 {
+    background-color: #FFFFFF;
+    width: 140px;
+    height: 180px;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.cards6.active{
+    border: 3px solid #3DFF3D;
+}
+
+.cards7 {
+    background-color: #FFFFFF;
+    width: 140px;
+    height: 180px;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.cards7.active{
+    border: 3px solid #3DFF3D;
+}
+
+.cards8 {
+    background-color: #FFFFFF;
+    width: 140px;
+    height: 180px;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.cards8.active{
+    border: 3px solid #3DFF3D;
+}
+
+.cards9 {
+    background-color: #FFFFFF;
+    width: 140px;
+    height: 180px;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.cards9.active{
+    border: 3px solid #3DFF3D;
+}
+
+@media (max-width: 540px) {
+h1 {
+    display: flex;
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700px;
+}
+
+.p1 {
+    display: flex;
+    text-align: center;
+}
+
+.p2 {
+    display: flex;
+    text-align: center;
+}
+
+    .cardsVo {
+        width: 340px;
+        height: 1154px;
+        left: 25px;
+        border-radius: 10px ;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .album {
+      left: 2px;
+    }
+
+}

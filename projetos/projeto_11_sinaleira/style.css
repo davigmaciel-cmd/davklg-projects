@@ -1,0 +1,29 @@
+.quadro {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+}
+h1 {
+    text-align: center;
+    line-height: 150px;
+}
+
+.quadra {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+}
+h2 {
+    text-align: center;
+    line-height: 150px;
+}
+
+.quadru {
+    width: 150px;
+    height: 150px;
+    background-color: green;
+}
+h3 {
+    text-align: center;
+    line-height: 150px;
+}

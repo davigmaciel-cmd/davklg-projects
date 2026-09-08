@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
+    margin: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 168px;
+    text-align: center;
+}
+
+.btn-01 {
+    padding: 10px 25px;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+}
+
+.btn-01:hover {
+    color: white;
+    background-color: black;
+}
+
+.btn-02 {
+    background-color: #80E8FF;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: 700px;
+}
+
+.btn-02:hover {
+    background:#9eedff;
+}
+
+.btn-03 {
+    color: black;
+    padding: 15px 30px;
+    text-align: center;
+    font-weight: 700px;
+    border-radius: 15px;
+}
+
+.btn-03:hover {
+    background-color: #8bffa4;
+}
+
+.btn-04 {
+    background-color: #ff00c8;
+    color: white;
+    padding: 10px 45px;
+    text-align: center;
+    font-weight: 700px;
+    border-radius: 5px;
+    border: 1px solid #ff00c8;
+}
+
+.btn-04:hover {
+    background-color: white;
+    color: #ff00c8;
+}
+
+.btn-05 {
+    color: red;
+    border: 1px solid red;
+    padding: 10px 45px;
+    text-align: center;
+    font-weight: 700px;
+    border-radius: 30px;
+}
+
+.btn-05:hover {
+    color: white;
+    background-color: red;
+}
+
+.btn-06 {
+    border: 1px solid black;
+    border-bottom: 3px solid black;
+    padding: 10px 45px;
+    text-align: center;
+    font-weight: 700px;
+    color: black;
+}
+
+.btn-06:hover {
+    background-color: #525252;
+    color: white;
+}
+
+.btn-07 {
+    padding: 10px 30px;
+    color: black;
+    font-weight: 700px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.btn-07:hover {
+    color: #626262;
+    border-bottom:2px solid #626262;
+}
+
+.btn-08 {
+    background-color: #fac02c;
+    border: 1px solid black;
+    padding: 10px 35px;
+    text-align: center;
+    font-weight: 700px;
+    color: black;
+    border-left: 3px solid black;
+    border-radius: 5px;
+}
+
+.btn-08:hover {
+    background-color: white;
+    border-color: #fac02c;
+}
+
+.btn-09 {
+    background-color: #15ff00;
+    color: #005810;
+    font-weight: 700px;
+    text-align: center;
+    padding: 10px 45px;
+    border: 1px solid #005810;
+    border-radius: 30px 0px;
+}
+
+.btn-09:hover {
+    background-color: #005810;
+    color: #15ff00;
+}
+
+.btn-10 {
+    padding: 10px 35px;
+    color: #640069;
+    text-align: center;
+    font-weight: 700px;
+    border: 2px dashed #640069;
+    border-radius: 15px;
+}
+
+.btn-10:hover {
+    color: white;
+    background-color: #640069;
+}

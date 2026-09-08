@@ -1,0 +1,66 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: #1A1A2E;
+}
+h1 {
+    text-align: center;
+    color: #20d4ff
+}
+ p {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+ }
+
+ .padrao-01 {
+    border: 1px solid white;
+    width: 350px;
+    height: 200px;
+    margin: 0 auto;
+    background-image: url(./assets/Rectangle\ 1\ \(1\).png)
+ }
+
+  .padrao-02 {
+    border: 1px solid white;
+    width: 350px;
+    height: 200px;
+    margin: 0 auto;
+    background-image: url(./assets/Rectangle\ 3\ \(2\).png);
+    background-repeat: no-repeat;
+ }
+
+ .padrao-03 {
+    border: 1px solid white;
+    width: 350px;
+    height: 200px;
+    margin: 0 auto;
+    background-image: url(./assets/Rectangle\ 2\ \(2\).png);
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+
+ .padrao-04 {
+    border: 1px solid white;
+    width: 350px;
+    height: 200px;
+    margin: 0 auto;
+    background-image: url(./assets/Rectangle\ 4\ \(1\).png);
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+
+ .padrao-05 {
+    border: 1px solid white;
+    width: 350px;
+    height: 200px;
+    margin: 0 auto;
+    background-image: url(./assets/Rectangle\ 5\ \(1\).png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 80px;
+ }

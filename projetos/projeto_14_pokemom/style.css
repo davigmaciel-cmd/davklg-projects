@@ -1,0 +1,29 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.card {
+    margin: 40px;
+    background-color: #ddbc00;
+    width: 300px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+h2 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.card-botton{
+    background-color: #fded91;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.marca {
+    text-align: center;
+    color: #8b7600;
+    margin-top: 10px
+}

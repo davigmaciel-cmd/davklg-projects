@@ -1,0 +1,23 @@
+body {
+    background-color: #5937D7;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.album {
+    border: 1px solid white;
+    width: 550px;
+    height: 801px;
+    margin: 0 auto;
+    background-image: url(./assets/canarinho.png);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 35px 0px;
+}
