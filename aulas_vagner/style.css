@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.imgP {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.forms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
