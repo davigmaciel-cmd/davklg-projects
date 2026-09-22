@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acesso Total — Tecnologia para todos</title>
+<meta name="description" content="Portal de conscientização sobre inclusão e acessibilidade digital, com artigos, galeria, vídeo e podcast produzidos com apoio de IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6F4EF;
+    --surface:#FFFFFF;
+    --ink:#1E1D1A;
+    --ink-soft:#55524A;
+    --line:#E1DDD1;
+    --accent:#2F6F63;
+    --accent-dark:#1F4A42;
+    --gold:#B4791F;
+    --focus:#1857C4;
+    --max:72rem;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', system-ui, sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces', Georgia, serif;
+    color:var(--ink);
+    line-height:1.15;
+    font-weight:600;
+    margin:0 0 0.6em;
+  }
+
+  p{ margin:0 0 1em; color:var(--ink-soft); max-width:38rem; }
+
+  a{ color:var(--accent-dark); }
+  a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-visible{
+    outline:3px solid var(--focus);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  img{ max-width:100%; display:block; }
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 1.5rem;
+  }
+
+  /* Cabeçalho */
+  .site-header{
+    position:sticky; top:0; z-index:10;
+    background:rgba(246,244,239,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .site-header .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    flex-wrap:wrap; gap:0.75rem 1.5rem;
+    padding-top:1rem; padding-bottom:1rem;
+  }
+  .brand{
+    display:flex; align-items:baseline; gap:0.6rem;
+    font-family:'Fraunces', serif; font-weight:700; font-size:1.3rem;
+    text-decoration:none; color:var(--ink);
+  }
+  .brand span{
+    font-family:'Inter', sans-serif; font-weight:500; font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+  .main-nav ul{
+    display:flex; flex-wrap:wrap; gap:1.6rem;
+    list-style:none; margin:0; padding:0;
+  }
+  .main-nav a{
+    text-decoration:none; color:var(--ink); font-weight:500; font-size:0.98rem;
+    padding:0.3rem 0.1rem; border-bottom:2px solid transparent;
+  }
+  .main-nav a:hover{ border-bottom-color:var(--accent); }
+
+  /* Hero / apresentação */
+  .hero{
+    padding:4.5rem 0 4rem;
+    border-bottom:1px solid var(--line);
+  }
+  .hero .wrap{
+    display:grid; grid-template-columns:1.3fr 1fr; gap:3rem; align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem, 4.4vw, 3.4rem);
+    max-width:16ch;
+  }
+  .hero .lede{
+    font-size:1.15rem; max-width:36ch;
+  }
+  .hero-figure{
+    background:var(--accent-dark);
+    border-radius:18px;
+    aspect-ratio:4/3;
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+  .hero-figure img{ width:100%; height:100%; object-fit:cover; }
+
+  .tag-row{
+    display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1.6rem;
+  }
+  .tag-row span{
+    border:1px solid var(--line);
+    background:var(--surface);
+    padding:0.35rem 0.85rem;
+    border-radius:100px;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+
+  /* Seções gerais */
+  section{ padding:4rem 0; border-bottom:1px solid var(--line); }
+  section:last-of-type{ border-bottom:none; }
+  .section-head{ max-width:42rem; margin-bottom:2.2rem; }
+  .section-head h2{ font-size:clamp(1.6rem,3vw,2.2rem); }
+
+  /* Apresentação */
+  .intro-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:2.5rem;
+  }
+  .intro-grid blockquote{
+    margin:0; padding-left:1.2rem; border-left:3px solid var(--accent);
+    font-family:'Fraunces', serif; font-size:1.3rem; font-style:italic;
+    color:var(--ink);
+  }
+
+  /* Conteúdo principal */
+  article.content h3{
+    font-size:1.3rem; margin-top:2rem;
+  }
+  article.content{
+    max-width:44rem;
+  }
+
+  /* Galeria */
+  .gallery{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:1.5rem;
+  }
+  .gallery figure{ margin:0; }
+  .gallery img{
+    width:100%; aspect-ratio:4/3; object-fit:cover;
+    border-radius:12px; border:1px solid var(--line);
+  }
+  .gallery figcaption{
+    margin-top:0.6rem; font-size:0.92rem; color:var(--ink-soft);
+  }
+
+  /* Blocos de mídia (vídeo / podcast) */
+  .media-block{
+    display:grid; grid-template-columns:1fr 1.15fr; gap:2.5rem; align-items:start;
+  }
+  .player{
+    background:var(--ink); border-radius:14px; overflow:hidden;
+    aspect-ratio:16/9; position:relative;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .player.audio{ aspect-ratio:16/7; background:var(--accent-dark); }
+  .player .play-btn{
+    width:64px; height:64px; border-radius:50%;
+    background:var(--surface); border:none;
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer;
+  }
+  .player .play-btn svg{ width:22px; height:22px; }
+  .player figcaption{
+    position:absolute; bottom:0.9rem; left:1rem; right:1rem;
+    color:#F2F0EA; font-size:0.85rem; opacity:0.85;
+  }
+
+  details{
+    margin-top:1.2rem;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:0.9rem 1.1rem;
+  }
+  summary{
+    cursor:pointer; font-weight:600; list-style:none;
+    display:flex; align-items:center; gap:0.6rem;
+  }
+  summary::-webkit-details-marker{ display:none; }
+  summary::before{
+    content:"+"; font-family:'Fraunces', serif; font-size:1.2rem; color:var(--accent);
+    width:1.2em;
+  }
+  details[open] summary::before{ content:"–"; }
+  .transcript{ margin-top:0.9rem; padding-top:0.9rem; border-top:1px solid var(--line); }
+  .transcript p{ font-size:0.96rem; }
+  .note{
+    font-size:0.85rem; color:var(--ink-soft); font-style:italic; margin-top:0.8rem;
+  }
+
+  /* Rodapé */
+  .site-footer{
+    background:var(--accent-dark); color:#EFEDE6;
+    padding:3rem 0 2.2rem;
+  }
+  .site-footer h2{ color:#fff; font-size:1.5rem; max-width:28ch; }
+  .site-footer p{ color:#D8E4DF; }
+  .team{
+    margin-top:1.8rem; padding-top:1.6rem; border-top:1px solid rgba(255,255,255,0.2);
+    font-size:0.9rem; color:#C9D6D0;
+  }
+
+  @media (max-width: 880px){
+    .hero .wrap{ grid-template-columns:1fr; }
+    .hero-figure{ order:-1; }
+    .intro-grid{ grid-template-columns:1fr; }
+    .gallery{ grid-template-columns:1fr 1fr; }
+    .media-block{ grid-template-columns:1fr; }
+  }
+  @media (max-width: 560px){
+    .gallery{ grid-template-columns:1fr; }
+    .main-nav ul{ gap:1rem 1.2rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#inicio">Acesso Total <span>tecnologia para todos</span></a>
+    <nav class="main-nav" aria-label="Menu principal">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#conteudo">Conteúdo</a></li>
+        <li><a href="#midias">Mídias</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section id="inicio" class="hero" aria-labelledby="hero-titulo">
+    <div class="wrap">
+      <div>
+        <h1 id="hero-titulo">Acessibilidade não é um extra. É o que torna a tecnologia de todos.</h1>
+        <p class="lede">Um em cada seis brasileiros vive com algum tipo de deficiência. Ainda assim, a maior parte dos sites e aplicativos é construída pensando em um único jeito de ver, ouvir e navegar. Este portal reúne artigos, imagens, um vídeo e um podcast para mostrar por que isso precisa mudar — e como a inteligência artificial pode ajudar nessa mudança.</p>
+        <div class="tag-row">
+          <span>Acessibilidade digital</span>
+          <span>Tecnologia assistiva</span>
+          <span>IA responsável</span>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <img src="./assets/diverse_group_of_students_and_tech_professionals_collaborating_around_an.png" alt="Grupo diverso de estudantes e profissionais de tecnologia colaborando ao redor de um computador">
+      </figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="apresentacao-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="apresentacao-titulo">Por que isso importa</h2>
+      </div>
+      <div class="intro-grid">
+        <p>Acessibilidade digital é a prática de projetar sites e aplicativos que qualquer pessoa consiga usar, independentemente de como ela enxerga, ouve, se move ou processa informação. Isso inclui pessoas cegas ou com baixa visão, pessoas surdas, pessoas com mobilidade reduzida e pessoas neurodivergentes — mas também beneficia qualquer usuário em condições difíceis, como uma tela com sol forte ou uma conexão instável.</p>
+        <blockquote>“Quando um site é acessível, ninguém precisa pedir para entrar. A porta já está aberta.”</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="conteudo" aria-labelledby="conteudo-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="conteudo-titulo">Barreiras invisíveis no mundo digital</h2>
+      </div>
+      <article class="content">
+        <h3>O que é acessibilidade digital</h3>
+        <p>Na prática, acessibilidade digital significa que um formulário pode ser preenchido só com o teclado, que uma imagem tem uma descrição para quem usa leitor de tela, e que o texto tem contraste suficiente para ser lido sob qualquer luz. Nenhuma dessas exigências é complexa isoladamente — o problema é que raramente são pensadas desde o início do projeto.</p>
+
+        <h3>Tecnologias assistivas mais comuns</h3>
+        <p>Leitores de tela convertem o conteúdo da página em voz ou braile. Teclados alternativos e switches permitem navegar sem usar um mouse. Softwares de reconhecimento de fala substituem a digitação. Legendas e transcrições tornam o áudio acessível para pessoas surdas. Nenhuma dessas ferramentas funciona bem, porém, se o site por trás delas não foi construído de forma semântica e organizada.</p>
+
+        <h3>Erros comuns que excluem pessoas</h3>
+        <p>Botões sem texto identificável, vídeos sem legenda, cores como única forma de indicar um erro, menus que só funcionam com o mouse: são detalhes pequenos para quem não depende deles, e barreiras completas para quem depende. A boa notícia é que a maioria tem solução simples — muitas vezes, uma escolha de código diferente já resolve.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="midias" aria-labelledby="galeria-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="galeria-titulo">Em imagens</h2>
+      </div>
+      <div class="gallery">
+        <figure>
+          <img src="./assets/hands_interacting_with_an_intuitive_accessible_tablet_interface_with_large.png" alt="Mãos interagindo com uma interface de tablet acessível, com botões grandes e de alto contraste">
+          <figcaption>Interfaces com alvos de toque grandes e contraste alto facilitam o uso por qualquer pessoa.</figcaption>
+        </figure>
+        <figure>
+          <img src="./assets/a_person_with_visual_impairment_using_a_computer_with_a_refreshable_braille.png" alt="Pessoa com deficiência visual usando um computador com um display de braile atualizável">
+          <figcaption>Displays de braile convertem o texto da tela em caracteres táteis, em tempo real.</figcaption>
+        </figure>
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20400%20300%27%3E%3Crect%20width%3D%27200%27%20height%3D%27300%27%20fill%3D%27%231F4A42%27/%3E%3Crect%20x%3D%27200%27%20width%3D%27200%27%20height%3D%27300%27%20fill%3D%27%23FFFFFF%27/%3E%3Ctext%20x%3D%27100%27%20y%3D%27185%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2796%27%20fill%3D%27%23FFFFFF%27%20text-anchor%3D%27middle%27%3EAa%3C/text%3E%3Ctext%20x%3D%27300%27%20y%3D%27185%27%20font-family%3D%27Georgia%2C%20serif%27%20font-size%3D%2796%27%20fill%3D%27%231F4A42%27%20text-anchor%3D%27middle%27%3EAa%3C/text%3E%3C/svg%3E" alt="Comparação lado a lado da mesma letra em fundo escuro com texto claro e fundo claro com texto escuro, ilustrando contraste de cores">
+          <figcaption>Contraste adequado entre texto e fundo ajuda pessoas com baixa visão a ler com conforto.</figcaption>
+        </figure>
+      </div>
+      <p class="note">Substitua a terceira ilustração pela imagem real da sua equipe, mantendo um texto alternativo objetivo.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="video-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="video-titulo">Vídeo: o que muda quando um site é acessível</h2>
+      </div>
+      <div class="media-block">
+        <figure class="player">
+          <button class="play-btn" type="button" aria-label="Reproduzir vídeo">
+            <svg viewBox="0 0 24 24" fill="#1E1D1A" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <figcaption>Espaço reservado para o vídeo — substitua por um elemento &lt;video&gt; ou pelo player incorporado da sua equipe.</figcaption>
+        </figure>
+        <div>
+          <p>Um vídeo curto, roteirizado e produzido com apoio de IA, mostrando na prática a diferença entre navegar em um site acessível e em um site com barreiras comuns.</p>
+          <details>
+            <summary>Ler transcrição completa do vídeo</summary>
+            <div class="transcript">
+              //* transcrição do video
+            </div>
+          </details>
+          <p class="note">Substitua este roteiro de exemplo pela transcrição completa do vídeo produzido pela sua equipe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="podcast-titulo">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="podcast-titulo">Podcast: acessibilidade na prática</h2>
+      </div>
+      <div class="media-block">
+        <figure class="player audio" style="background:var(--surface); border:1px solid var(--line); flex-direction:column; align-items:stretch; justify-content:flex-start; padding:1.4rem; aspect-ratio:auto;">
+          <figcaption style="position:static; color:var(--ink); opacity:1; margin-bottom:0.9rem; font-weight:600;">Episódio: O muro invisível na internet brasileira</figcaption>
+          <audio controls style="width:100%;">
+            <source src="assets/podcast-muro-invisivel.m4a" type="audio/mp4">
+            Seu navegador não suporta a reprodução de áudio. <a href="assets/podcast-muro-invisivel.m4a">Baixe o episódio em .m4a</a>.
+          </audio>
+        </figure>
+        <div>
+          <p>Um episódio curto, com roteiro organizado por IA e narração revisada pela equipe, conversando sobre tecnologia assistiva no dia a dia.</p>
+          <details>
+            <summary>Ler transcrição completa do podcast</summary>
+            <div class="transcript">
+              <p><strong>Apresentador(a) 1:</strong> Bem-vindos ao episódio de hoje. Vamos falar sobre um assunto que passa despercebido até o dia em que a gente precisa dele: tecnologia assistiva.</p>
+              <p><strong>Apresentador(a) 2:</strong> Exatamente. E o interessante é que boa parte dessas soluções já existe há anos — leitor de tela, legenda automática, comando de voz. O problema é quando os sites não foram pensados para funcionar com elas.</p>
+              <p><strong>Apresentador(a) 1:</strong> Isso. Um exemplo simples: um botão de "comprar" que é só um ícone, sem nenhum texto por trás. Para quem enxerga, tudo bem. Para quem usa leitor de tela, esse botão simplesmente não existe.</p>
+              <p><strong>Apresentador(a) 2:</strong> E dá pra resolver com uma linha de código. É esse tipo de escolha pequena que muda quem consegue, ou não, usar um serviço.</p>
+              <p><strong>[Trilha sonora suave ao fundo]</strong></p>
+              <p><strong>Apresentador(a) 1:</strong> Por isso a gente insiste tanto nesse tema no projeto. Obrigado por ouvir, e até o próximo episódio.</p>
+            </div>
+          </details>
+          <p class="note">Substitua este roteiro de exemplo pela transcrição completa do episódio produzido pela sua equipe, identificando participantes e sons relevantes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="sobre">
+  <div class="wrap">
+    <h2>Tecnologia só é para todos quando é pensada para todos.</h2>
+    <p>Este projeto foi desenvolvido com apoio de inteligência artificial para planejamento, textos, imagens, vídeo e podcast — com revisão e responsabilidade final da equipe.</p>
+    <div class="team">
+      Equipe: [Nome do integrante 1] · [Nome do integrante 2] · [Nome do integrante 3] — [Turma / Disciplina]
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
